@@ -9,8 +9,8 @@ import java.util.ArrayList;
 public class Forum{
     private static int  NBR_MESSAGES = 10;
 
-    private int nbrMessagesPostes = 0;
-    private MessageUtilisateur messages[] = new MessageUtilisateur[NBR_MESSAGES];
+    private  static int nbrMessagesPostes = 0;
+    private static MessageUtilisateur messages[] = new MessageUtilisateur[NBR_MESSAGES];
 
     public Forum( ) {
 
@@ -43,7 +43,7 @@ public class Forum{
         this.messages = messages;
     }
 
-    public boolean ajouterUtilisateurMessages (Utilisateur utilisateur, Message message){
+    public static boolean ajouterUtilisateurMessages (Utilisateur utilisateur, Message message){
         if (nbrMessagesPostes < NBR_MESSAGES){
         messages[nbrMessagesPostes] = new MessageUtilisateur(utilisateur, message);
         nbrMessagesPostes ++;

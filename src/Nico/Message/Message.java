@@ -23,7 +23,7 @@ public class Message {
         this.texte = texte;
         dateCreation = new Date();
         this.utilisateur = utilisateur;
-        forum.ajouterUtilisateurMessages(utilisateur, this);
+        Forum.ajouterUtilisateurMessages(utilisateur, this);
 
         //ajouterUtilisateurMessages()
     }
