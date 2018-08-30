@@ -3,9 +3,9 @@ package Nico.Utilisateur;
 import Nico.CategorieUtilisateur.CategorieUtilisateur;
 
 public class Utilisateur {
-    String nom;
-    String prenom;
-    CategorieUtilisateur statut;
+    private String nom;
+    private String prenom;
+    private CategorieUtilisateur statut;
 
     public Utilisateur(String nom, String prenom, CategorieUtilisateur statut) {
         this.nom = nom;
@@ -41,4 +41,5 @@ public class Utilisateur {
     public String toString(){
         return "Utilisateur: " + prenom + " " + nom + " " + statut;
     }
+
 }

@@ -6,13 +6,15 @@ import java.text.DateFormat;
 import java.util.Date;
 
 public class Message {
+    //-----------Variables--Statique-------------------------------------------
+    public static final Forum forum = new Forum();
 
     //-----------Variables----------------------------------------------------
 
-    String titre;
-    String texte;
-    Date dateCreation;
-    Utilisateur utilisateur;
+    private String titre;
+    private String texte;
+    private Date dateCreation;
+    private Utilisateur utilisateur;
 
     //-----------------constructeur--------------------------------------------------------------------------------
 
@@ -21,6 +23,7 @@ public class Message {
         this.texte = texte;
         dateCreation = new Date();
         this.utilisateur = utilisateur;
+        forum.ajouterUtilisateurMessages(utilisateur, this);
 
         //ajouterUtilisateurMessages()
     }
@@ -52,14 +55,16 @@ public class Message {
         return utilisateur;
     }
 
-
-    //---------------------Methode----------------------------
+    public static Forum getForum() {
+        return forum;
+    }
+//---------------------Methode----------------------------
 
     @Override
     public String toString(){
         return titre + "--" + texte + "\nDate de création : " + getDateCreation() + "\n" + utilisateur;
     }
     public String getAuteur(){
-        return utilisateur.getPrenom()+" "+ utilisateur.getNom()+","+ utilisateur.getStatut();
+        return utilisateur.getPrenom()+" "+ utilisateur.getNom();
     }
 }
