@@ -3,8 +3,8 @@ package Nico.Message;
 import Nico.Utilisateur.Utilisateur;
 
 public class MessageUtilisateur {
-    Utilisateur utilisateur;
-    Message message;
+    private Utilisateur utilisateur;
+    private Message message;
 
     public MessageUtilisateur(Utilisateur utilisateur, Message message) {
         this.utilisateur = utilisateur;
